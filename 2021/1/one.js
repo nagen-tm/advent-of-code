@@ -8,16 +8,40 @@
 //import libs
 const fs = require('fs');
 
-// placeholder for count
-let count = 0;
+const depth = async () => {
+  // placeholder for count
+  let count = 0;
 
-// read the file
-const readFile = fs.readFileSync('day_one_input.txt', 'utf8').split('\n').filter((x) => Boolean(x)).map((x) => parseInt(x));
+  // read the file
+ const readFile = fs.readFileSync('input.txt', 'utf8').split('\n').filter((x) => Boolean(x)).map((x) => parseInt(x));
 
-// loop through, compare last to present
-for(let i = 1; i < readFile.length; i++){
-  if(readFile[i] > readFile[i-1]){
-    count++;
+  // loop through, compare last to present
+  for(let i = 1; i < readFile.length; i++){
+    if(readFile[i] > readFile[i-1]){
+      count++;
+    }
   }
+  console.log(count);
 }
-console.log(count);
+
+const depth_two = async () => {
+  // placeholder for count
+  let count = 0;
+
+  // read the file
+ const readFile = fs.readFileSync('input.txt', 'utf8').split('\n').filter((x) => Boolean(x)).map((x) => parseInt(x));
+
+  // loop through, compare last to present
+  for(let i = 2; i < readFile.length; i++){
+    let firstThree = readFile[i] + readFile[i - 1] + readFile[i - 2];
+    let nextThree = readFile[i - 1] + readFile[i] + readFile[i + 1];
+
+    if(nextThree > firstThree){
+      count++;
+    }
+  }
+  console.log(count);
+}
+
+depth();
+depth_two()
