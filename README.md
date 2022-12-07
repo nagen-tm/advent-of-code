@@ -9,3 +9,4 @@ Commented notes are in each day's section. Noteworthy learnings:
 - Set object, checks array for unique values
 - .shift removes first element of array
   - .pop removes last element of array
+- when you use .concat, it has to be saved into an already made array, or into a new one (day 5 part 2 issue)
