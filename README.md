@@ -1,5 +1,10 @@
 # advent-of-code
+## 2023
+
+
 ## 2022
+Finished days 1-6 and 8. Goal for 2023 to get farther.
+
 I'm working in javascript to finsh this years AOC and learn new functions and processes. 
 
 Initial reference to get started: [Youtube Video ](https://www.youtube.com/watch?v=um_-T8patWs)
