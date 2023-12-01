@@ -6,24 +6,24 @@ content = file.readlines()
 # placeholder for total per line
 total = []
 num_dict = {'1':'one', '2': 'two', '3':'three','4':'four', '5':'five', '6':'six', '7':'seven' , '8':'eight', '9':'nine'}
-#for each line, replace the spelled numbers
+# check by character for string numbers
 for line in content:
-    number = ''
-    #line = update_string(line)
+    value = ''
     # enumerate lets you use the index of each character in the line
     for i, char in enumerate(line):
         if char.isdigit():
-            number += char
+            value += char
         for num in num_dict:
             if line[i:].startswith(num_dict.get(num)):
-                number += num
+                value += num
     # reduce down to first and last numbers
-    if len(number) > 2:
-        number = number[0] + number[len(number)-1]
-    if len(number) == 1:
-        number = number + number
+    if len(value) > 2:
+        value = value[0] + value[len(value)-1]
+    # if only one value, double it
+    if len(value) == 1:
+        value = value + value
     # convert strings to int
-    total.append(int(number))
+    total.append(int(value))
 # add total and print
 calibrationNum = sum(total) 
 print(calibrationNum)    
