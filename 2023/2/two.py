@@ -1,4 +1,4 @@
-# Part one: add all the possible games if there were 12 red, 13 green and 14 blue cubes
+# Part two: find the least amount of each color possible, multiply those together and find sum of each line
 file = open('input.txt','r')
 content = file.readlines()
 
@@ -10,25 +10,20 @@ for line in content:
     blue = 0
     green = 0
     # split the line to relevant info
-    split_info = line.split(':')
-    cube_reveals = split_info[1].split(';')
+    get_id,games = line.split(': ')
+    cube_reveals = games.split('; ')
     # loop through the groups of cubes
     for cubes in cube_reveals:
-        split_cubes = cubes.split(',')
-        for color in split_cubes:
+        split_cubes = cubes.split(', ')
+        for group in split_cubes:
+            number,color = group.split(' ')
             # for each color check if it's the highest
-            if 'red' in color:
-                get_num = color.split(' ')
-                if int(get_num[1]) > red:
-                    red = int(get_num[1])
-            if 'green' in color:
-                get_num = color.split(' ')
-                if int(get_num[1]) > green:
-                    green = int(get_num[1])              
-            if 'blue' in color:
-                get_num = color.split(' ')
-                if int(get_num[1]) > blue:
-                    blue = int(get_num[1])
+            if 'red' in group and int(number) > red:
+                red = int(number)
+            if 'green' in group and int(number) > green:
+                green = int(number)              
+            if 'blue' in group and int(number) > blue:
+                blue = int(number)
     # multiple the number of cubes together, add to total
     power = red * blue * green
     total += power
