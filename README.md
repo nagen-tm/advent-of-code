@@ -1,11 +1,17 @@
 # advent-of-code
 ## 2023
+Days finished: 2
 
+Language: Python
+
+Noteworthy Learnings:
+- enumerate() adds a counter to iterate through easier
+- day two use of split(), naming the data ahead of time instead of using the index 
 
 ## 2022
-Finished days 1-6 and 8. Goal for 2023 to get farther.
+Days finished: 1-6 and 8.
 
-I'm working in javascript to finsh this years AOC and learn new functions and processes. 
+Language: Javascript
 
 Initial reference to get started: [Youtube Video ](https://www.youtube.com/watch?v=um_-T8patWs)
 
