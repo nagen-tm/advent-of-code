@@ -1,8 +1,12 @@
 # advent-of-code
 ## 2023
-Days finished: 2
+Days finished: 1-4, part one of 5, 6
 
 Language: Python
+
+ToDo: 
+- Study day 3 solutions to better understand comparison of index on different lines
+- clean up earlier days to better use functions
 
 Noteworthy Learnings:
 - enumerate() adds a counter to iterate through easier
