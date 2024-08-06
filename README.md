@@ -11,6 +11,7 @@ ToDo:
 Noteworthy Learnings:
 - enumerate() adds a counter to iterate through easier
 - day two use of split(), naming the data ahead of time instead of using the index 
+- interesting [youtube video ](https://www.youtube.com/watch?v=sGjAe6y299g) on recursion/loops
 
 ## 2022
 Days finished: 1-6 and 8.
